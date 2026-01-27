@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 640px;
+  height: 640px;
+}
+
+.gridSquare {
+  width: calc(100%/16);
+  /*here, the 100% references the width we declared earlier in .container */
+  height: calc(100%/16);
+  /* same here */
+  box-sizing: border-box;
+  /* box sizing is how big the .gridSquare div is, and border-box says to make the margin and padding of .gridSqaure a part of the total size */
+  /* this is to ensure we don't overflow our pre-defined width and height earlier in .container */
+  border: 1px solid black;
+}
