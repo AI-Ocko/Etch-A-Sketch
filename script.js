@@ -5,9 +5,13 @@ const parent = document.querySelector(".container");
 // set initial gridSize
 const gridSize = 16;
 
-// fill in the number of gridsquares
 for (let i = 0; i < gridSize * gridSize; i++) {
+  // fill in the number of gridsquares
   const child = document.createElement("div");
   child.classList.add("gridSquare");
   parent.appendChild(child);
+
+  child.addEventListener("mouseover", () => {
+    child.style.backgroundColor = "black";
+  })
 }
